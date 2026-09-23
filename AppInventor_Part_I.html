@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AppInventor Part I | CS Mission Log</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="mission" data-mission="AppInventor_Part_I">
+  <div class="starfield" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="index.html">CS Mission Log</a>
+    <span class="chip" id="cadetChip">No cadet saved</span>
+  </header>
+
+  <main class="wrap">
+    <div class="crumb"><a href="index.html">Mission Log</a> / AppInventor_Part_I</div>
+
+    <div class="page-head">
+      <h1>AppInventor Part I</h1>
+    </div>
+
+    <div class="summary">
+      <div class="panel">
+        <strong>Cadet input</strong>
+        <div class="meter"><i id="cadetMeter"></i></div>
+        <span class="meter-label" id="cadetCount">0 of 0 complete</span>
+      </div>
+      <div class="panel">
+        <strong>Mission control</strong>
+        <div class="meter"><i id="controlMeter"></i></div>
+        <span class="meter-label" id="controlCount">0 of 0 verified</span>
+      </div>
+    </div>
+
+    <div class="notice" id="codeNotice" hidden>Mission control boxes unlock when an instructor code is saved on the <a href="index.html" style="color:inherit">home page</a>.</div>
+
+    <section class="panel board" aria-label="AppInventor Part I checklist">
+      <div class="board-head">
+        <span>Cadet input</span>
+        <span>Mission control</span>
+      </div>
+      <ul class="tree">
+        <li>
+          <div class="row group">
+            <div class="cadet">
+              <label class="check"><input type="checkbox" data-save data-cadet id="c-mfa"><span class="box"></span><span class="label-text">MyFirstApp</span></label>
+              <label class="due">Due <input type="date" data-save id="due-mfa" aria-label="Due date for mfa"></label>
+            </div>
+            <div class="control">
+              <label class="check"><input type="checkbox" data-save data-control id="m-mfa"><span class="box"></span><span class="verify-text">Verified</span></label>
+            </div>
+          </div>
+          <ul>
+          <li><div class="row">
+            <div class="cadet">
+              <label class="check"><input type="checkbox" data-save data-cadet id="c-mfa-title"><span class="box"></span><span class="label-text">Titled <span class="name-fill" data-fill="name">LastnameFirstname</span>MyFirstApp</span></label>
+              
+            </div>
+            <div class="control">
+              <label class="check"><input type="checkbox" data-save data-control id="m-mfa-title"><span class="box"></span><span class="verify-text">Verified</span></label>
+            </div>
+          </div></li>
+          <li><div class="row">
+            <div class="cadet">
+              <label class="check"><input type="checkbox" data-save data-cadet id="c-mfa-button"><span class="box"></span><span class="label-text">Has a Button on the Designer screen</span></label>
+              
+            </div>
+            <div class="control">
+              <label class="check"><input type="checkbox" data-save data-control id="m-mfa-button"><span class="box"></span><span class="verify-text">Verified</span></label>
+            </div>
+          </div></li>
+          <li><div class="row">
+            <div class="cadet">
+              <label class="check"><input type="checkbox" data-save data-cadet id="c-mfa-sound"><span class="box"></span><span class="label-text">Has a Sound on the Designer screen</span></label>
+              
+            </div>
+            <div class="control">
+              <label class="check"><input type="checkbox" data-save data-control id="m-mfa-sound"><span class="box"></span><span class="verify-text">Verified</span></label>
+            </div>
+          </div></li>
+          <li><div class="row">
+            <div class="cadet">
+              <label class="check"><input type="checkbox" data-save data-cadet id="c-mfa-click"><span class="box"></span><span class="label-text">Has a .Click event on the Blocks</span></label>
+              
+            </div>
+            <div class="control">
+              <label class="check"><input type="checkbox" data-save data-control id="m-mfa-click"><span class="box"></span><span class="verify-text">Verified</span></label>
+            </div>
+          </div></li>
+          <li><div class="row">
+            <div class="cadet">
+              <label class="check"><input type="checkbox" data-save data-cadet id="c-mfa-play"><span class="box"></span><span class="label-text">Has a Sound.Play method on the Blocks</span></label>
+              
+            </div>
+            <div class="control">
+              <label class="check"><input type="checkbox" data-save data-control id="m-mfa-play"><span class="box"></span><span class="verify-text">Verified</span></label>
+            </div>
+          </div></li>
+          <li><div class="row">
+            <div class="cadet">
+              <label class="check"><input type="checkbox" data-save data-cadet id="c-mfa-align"><span class="box"></span><span class="label-text">Screen1 AlignHorizontal is Center</span></label>
+              
+            </div>
+            <div class="control">
+              <label class="check"><input type="checkbox" data-save data-control id="m-mfa-align"><span class="box"></span><span class="verify-text">Verified</span></label>
+            </div>
+          </div></li>
+          <li><div class="row">
+            <div class="cadet">
+              <label class="check"><input type="checkbox" data-save data-cadet id="c-mfa-design"><span class="box"></span><span class="label-text">Student understands that Design “will not work” to show functionality</span></label>
+              
+            </div>
+            <div class="control">
+              <label class="check"><input type="checkbox" data-save data-control id="m-mfa-design"><span class="box"></span><span class="verify-text">Verified</span></label>
+            </div>
+          </div></li>
+          </ul>
+        </li>
+        <li>
+          <div class="row group">
+            <div class="cadet">
+              <label class="check"><input type="checkbox" data-save data-cadet id="c-myapp"><span class="box"></span><span class="label-text">My<input type="text" class="inline-blank" data-save id="myapp-name" placeholder="name" aria-label="Name of your app" maxlength="30">App</span></label>
+              <label class="due">Due <input type="date" data-save id="due-myapp" aria-label="Due date for myapp"></label>
+            </div>
+            <div class="control">
+              <label class="check"><input type="checkbox" data-save data-control id="m-myapp"><span class="box"></span><span class="verify-text">Verified</span></label>
+            </div>
+          </div>
+          <ul>
+          <li><div class="row">
+            <div class="cadet">
+              <label class="check"><input type="checkbox" data-save data-cadet id="c-myapp-title"><span class="box"></span><span class="label-text">Titled something meaningful</span></label>
+              
+            </div>
+            <div class="control">
+              <label class="check"><input type="checkbox" data-save data-control id="m-myapp-title"><span class="box"></span><span class="verify-text">Verified</span></label>
+            </div>
+          </div></li>
+          <li><div class="row">
+            <div class="cadet">
+              <label class="check"><input type="checkbox" data-save data-cadet id="c-myapp-pieces"><span class="box"></span><span class="label-text">Has all pieces above</span></label>
+              
+            </div>
+            <div class="control">
+              <label class="check"><input type="checkbox" data-save data-control id="m-myapp-pieces"><span class="box"></span><span class="verify-text">Verified</span></label>
+            </div>
+          </div></li>
+          <li><div class="row">
+            <div class="cadet">
+              <label class="check"><input type="checkbox" data-save data-cadet id="c-myapp-image"><span class="box"></span><span class="label-text">Includes an appropriate image on the Image property of the button</span></label>
+              
+            </div>
+            <div class="control">
+              <label class="check"><input type="checkbox" data-save data-control id="m-myapp-image"><span class="box"></span><span class="verify-text">Verified</span></label>
+            </div>
+          </div></li>
+          <li><div class="row">
+            <div class="cadet">
+              <label class="check"><input type="checkbox" data-save data-cadet id="c-myapp-does"><span class="box"></span><span class="label-text">Does something</span></label>
+              
+            </div>
+            <div class="control">
+              <label class="check"><input type="checkbox" data-save data-control id="m-myapp-does"><span class="box"></span><span class="verify-text">Verified</span></label>
+            </div>
+          </div></li>
+          </ul>
+        </li>
+        <li>
+          <div class="row group">
+            <div class="cadet">
+              <label class="check"><input type="checkbox" data-save data-cadet id="c-simple"><span class="box"></span><span class="label-text">SimpleDrawingApps</span></label>
+              
+            </div>
+            <div class="control">
+              <label class="check"><input type="checkbox" data-save data-control id="m-simple"><span class="box"></span><span class="verify-text">Verified</span></label>
+            </div>
+          </div>
+          <ul>
+          <li>
+          <div class="row group">
+            <div class="cadet">
+              <label class="check"><input type="checkbox" data-save data-cadet id="c-draw1"><span class="box"></span><span class="label-text">FirstDrawApp</span></label>
+              <label class="due">Due <input type="date" data-save id="due-draw1" aria-label="Due date for draw1"></label>
+            </div>
+            <div class="control">
+              <label class="check"><input type="checkbox" data-save data-control id="m-draw1"><span class="box"></span><span class="verify-text">Verified</span></label>
+            </div>
+          </div>
+          <ul>
+          <li><div class="row">
+            <div class="cadet">
+              <label class="check"><input type="checkbox" data-save data-cadet id="c-draw1-canvas"><span class="box"></span><span class="label-text">Has a Canvas</span></label>
+              
+            </div>
+            <div class="control">
+              <label class="check"><input type="checkbox" data-save data-control id="m-draw1-canvas"><span class="box"></span><span class="verify-text">Verified</span></label>
+            </div>
+          </div></li>
+          <li><div class="row">
+            <div class="cadet">
+              <label class="check"><input type="checkbox" data-save data-cadet id="c-draw1-height"><span class="box"></span><span class="label-text">Canvas has Height of 80%</span></label>
+              
+            </div>
+            <div class="control">
+              <label class="check"><input type="checkbox" data-save data-control id="m-draw1-height"><span class="box"></span><span class="verify-text">Verified</span></label>
+            </div>
+          </div></li>
+          <li><div class="row">
+            <div class="cadet">
+              <label class="check"><input type="checkbox" data-save data-cadet id="c-draw1-width"><span class="box"></span><span class="label-text">Canvas has Width of Fill parent</span></label>
+              
+            </div>
+            <div class="control">
+              <label class="check"><input type="checkbox" data-save data-control id="m-draw1-width"><span class="box"></span><span class="verify-text">Verified</span></label>
+            </div>
+          </div></li>
+          <li><div class="row">
+            <div class="cadet">
+              <label class="check"><input type="checkbox" data-save data-cadet id="c-draw1-buttons"><span class="box"></span><span class="label-text">Has two buttons, DrawButton and ClearButton</span></label>
+              
+            </div>
+            <div class="control">
+              <label class="check"><input type="checkbox" data-save data-control id="m-draw1-buttons"><span class="box"></span><span class="verify-text">Verified</span></label>
+            </div>
+          </div></li>
+          <li><div class="row">
+            <div class="cadet">
+              <label class="check"><input type="checkbox" data-save data-cadet id="c-draw1-work"><span class="box"></span><span class="label-text">Those buttons work as intended (Draws from previous to current and Clears)</span></label>
+              
+            </div>
+            <div class="control">
+              <label class="check"><input type="checkbox" data-save data-control id="m-draw1-work"><span class="box"></span><span class="verify-text">Verified</span></label>
+            </div>
+          </div></li>
+          </ul>
+        </li>
+          <li>
+          <div class="row group">
+            <div class="cadet">
+              <label class="check"><input type="checkbox" data-save data-cadet id="c-draw2"><span class="box"></span><span class="label-text">ComplexDrawApp</span></label>
+              <label class="due">Due <input type="date" data-save id="due-draw2" aria-label="Due date for draw2"></label>
+            </div>
+            <div class="control">
+              <label class="check"><input type="checkbox" data-save data-control id="m-draw2"><span class="box"></span><span class="verify-text">Verified</span></label>
+            </div>
+          </div>
+          <ul>
+          <li><div class="row">
+            <div class="cadet">
+              <label class="check"><input type="checkbox" data-save data-cadet id="c-draw2-saveas"><span class="box"></span><span class="label-text">ComplexDrawApp was made by using Save project as …</span></label>
+              
+            </div>
+            <div class="control">
+              <label class="check"><input type="checkbox" data-save data-control id="m-draw2-saveas"><span class="box"></span><span class="verify-text">Verified</span></label>
+            </div>
+          </div></li>
+          <li><div class="row">
+            <div class="cadet">
+              <label class="check"><input type="checkbox" data-save data-cadet id="c-draw2-buttons"><span class="box"></span><span class="label-text">Has three more buttons, RedButton, GreenButton, BlueButton</span></label>
+              
+            </div>
+            <div class="control">
+              <label class="check"><input type="checkbox" data-save data-control id="m-draw2-buttons"><span class="box"></span><span class="verify-text">Verified</span></label>
+            </div>
+          </div></li>
+          <li><div class="row">
+            <div class="cadet">
+              <label class="check"><input type="checkbox" data-save data-cadet id="c-draw2-arrange"><span class="box"></span><span class="label-text">Those buttons are in a HorizontalArrangement</span></label>
+              
+            </div>
+            <div class="control">
+              <label class="check"><input type="checkbox" data-save data-control id="m-draw2-arrange"><span class="box"></span><span class="verify-text">Verified</span></label>
+            </div>
+          </div></li>
+          <li><div class="row">
+            <div class="cadet">
+              <label class="check"><input type="checkbox" data-save data-cadet id="c-draw2-color"><span class="box"></span><span class="label-text">Changes color appropriately using those buttons</span></label>
+              
+            </div>
+            <div class="control">
+              <label class="check"><input type="checkbox" data-save data-control id="m-draw2-color"><span class="box"></span><span class="verify-text">Verified</span></label>
+            </div>
+          </div></li>
+          </ul>
+        </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section class="panel notes">
+      <h2>Notes</h2>
+      <label for="notes" class="muted">Reminders, questions, or feedback for this mission.</label>
+      <textarea id="notes" data-save placeholder="Type notes here"></textarea>
+      <div class="actions">
+        <button type="button" class="btn primary" id="saveBtn">Save</button>
+        <span class="status" id="saveStatus" role="status" aria-live="polite"></span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">CS Mission Log</footer>
+  <script src="script.js"></script>
+</body>
+</html>

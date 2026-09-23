@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CS Mission Log</title>
+  <meta name="description" content="Computer science mission checklists with saved progress.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="home">
+  <div class="starfield" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="index.html">CS Mission Log</a>
+    <span class="chip" id="cadetChip">No cadet saved</span>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1>CS Mission Log</h1>
+      <p class="lede">Track every checklist from launch to landing. Progress stays in this browser, and a backup file keeps it safe if the cache clears.</p>
+    </section>
+
+    <section class="panel" aria-labelledby="idHeading">
+      <h2 id="idHeading">Cadet identification</h2>
+      <form id="profileForm" autocomplete="off">
+        <div class="field-row">
+          <label class="field">
+            <span>First name</span>
+            <input type="text" id="firstName" name="firstName" placeholder="First name" maxlength="40">
+          </label>
+          <label class="field">
+            <span>Last name</span>
+            <input type="text" id="lastName" name="lastName" placeholder="Last name" maxlength="40">
+          </label>
+          <label class="field">
+            <span>Instructor code</span>
+            <input type="text" id="instructorCode" name="instructorCode" placeholder="Instructor code" maxlength="40">
+          </label>
+        </div>
+        <div class="actions">
+          <button type="submit" class="btn primary">Save</button>
+          <span class="status" id="profileStatus" role="status" aria-live="polite"></span>
+        </div>
+      </form>
+    </section>
+
+    <section aria-labelledby="missionHeading">
+      <h2 id="missionHeading" class="section-title">Missions</h2>
+      <div class="mission-grid" id="missionGrid"></div>
+    </section>
+
+    <section class="panel" aria-labelledby="backupHeading">
+      <h2 id="backupHeading">Backup and restore</h2>
+      <p class="muted">Everything is stored in this browser. Export a JSON file after each work session, and import it to restore progress on any device.</p>
+      <div class="actions">
+        <button type="button" class="btn primary" id="exportBtn">Export all as JSON</button>
+        <label class="btn ghost" for="importFile">Import backup</label>
+        <input type="file" id="importFile" accept="application/json,.json" hidden>
+        <span class="status" id="backupStatus" role="status" aria-live="polite"></span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">CS Mission Log</footer>
+  <script src="script.js"></script>
+</body>
+</html>
