@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SideQuests | CS Mission Log</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="mission" data-mission="SideQuests">
+  <div class="starfield" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="index.html">CS Mission Log</a>
+    <span class="chip" id="cadetChip">No cadet saved</span>
+  </header>
+
+  <main class="wrap">
+    <div class="crumb"><a href="index.html">Mission Log</a> / SideQuests</div>
+
+    <div class="page-head">
+      <h1>SideQuests</h1>
+    </div>
+
+    <div class="summary">
+      <div class="panel">
+        <strong>Cadet input</strong>
+        <div class="meter"><i id="cadetMeter"></i></div>
+        <span class="meter-label" id="cadetCount">0 of 0 complete</span>
+      </div>
+      <div class="panel">
+        <strong>Mission control</strong>
+        <div class="meter"><i id="controlMeter"></i></div>
+        <span class="meter-label" id="controlCount">0 of 0 verified</span>
+      </div>
+    </div>
+
+    <div class="notice" id="codeNotice" hidden>Mission control boxes unlock when an instructor code is saved on the <a href="index.html" style="color:inherit">home page</a>.</div>
+
+    <section class="panel board" aria-label="SideQuests checklist">
+      <div class="board-head">
+        <span>Cadet input</span>
+        <span>Mission control</span>
+      </div>
+      <ul class="tree">
+
+        <li>
+          <div class="row">
+            <div class="cadet">
+              <label class="check"><input type="checkbox" data-save data-cadet id="c-sq-reflection"><span class="box"></span><span class="label-text">ReflectionResponse</span></label>
+            </div>
+            <div class="control">
+              <label class="check"><input type="checkbox" data-save data-control id="m-sq-reflection"><span class="box"></span><span class="verify-text">Verified</span></label>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="row">
+            <div class="cadet">
+              <label class="check"><input type="checkbox" data-save data-cadet id="c-sq-meanavg"><span class="box"></span><span class="label-text">Mean_and_Average_Checks Virtual Worksheet</span></label>
+            </div>
+            <div class="control">
+              <label class="check"><input type="checkbox" data-save data-control id="m-sq-meanavg"><span class="box"></span><span class="verify-text">Verified</span></label>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="row">
+            <div class="cadet">
+              <label class="check"><input type="checkbox" data-save data-cadet id="c-sq-cipher1"><span class="box"></span><span class="label-text">Cipher Activity 1</span></label>
+            </div>
+            <div class="control">
+              <label class="check"><input type="checkbox" data-save data-control id="m-sq-cipher1"><span class="box"></span><span class="verify-text">Verified</span></label>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="row">
+            <div class="cadet">
+              <label class="check"><input type="checkbox" data-save data-cadet id="c-sq-modarith"><span class="box"></span><span class="label-text">ModularArithmetic worksheet</span></label>
+            </div>
+            <div class="control">
+              <label class="check"><input type="checkbox" data-save data-control id="m-sq-modarith"><span class="box"></span><span class="verify-text">Verified</span></label>
+            </div>
+          </div>
+        </li>
+
+        <!-- ============================================================
+             ADD MORE SIDEQUESTS BELOW
+             Copy one of the <li> blocks above, paste it here, and edit:
+               - the two ids ("c-..." and "m-...") so they are unique on this page
+               - the text inside <span class="label-text">...</span>
+
+        <li>
+          <div class="row">
+            <div class="cadet">
+              <label class="check"><input type="checkbox" data-save data-cadet id="c-sq-NEWITEM"><span class="box"></span><span class="label-text">New SideQuest name</span></label>
+            </div>
+            <div class="control">
+              <label class="check"><input type="checkbox" data-save data-control id="m-sq-NEWITEM"><span class="box"></span><span class="verify-text">Verified</span></label>
+            </div>
+          </div>
+        </li>
+
+        -->
+
+        <!-- ============================================================
+             ADD A SIDEQUEST WITH SUBITEMS (nesting)
+             To turn one SideQuest into a group with its own checklist under
+             it, wrap the <li> in a <ul>. The item becomes the heading row,
+             and each subitem is its own row inside the nested <ul>.
+             Add class="row group" to the heading's row div so it is styled
+             as a header. Uncomment and edit the block below to use it:
+
+        <li>
+          <div class="row group">
+            <div class="cadet">
+              <label class="check"><input type="checkbox" data-save data-cadet id="c-sq-GROUP"><span class="box"></span><span class="label-text">New SideQuest group name</span></label>
+            </div>
+            <div class="control">
+              <label class="check"><input type="checkbox" data-save data-control id="m-sq-GROUP"><span class="box"></span><span class="verify-text">Verified</span></label>
+            </div>
+          </div>
+          <ul>
+            <li>
+              <div class="row">
+                <div class="cadet">
+                  <label class="check"><input type="checkbox" data-save data-cadet id="c-sq-GROUP-sub1"><span class="box"></span><span class="label-text">First subitem</span></label>
+                </div>
+                <div class="control">
+                  <label class="check"><input type="checkbox" data-save data-control id="m-sq-GROUP-sub1"><span class="box"></span><span class="verify-text">Verified</span></label>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <div class="cadet">
+                  <label class="check"><input type="checkbox" data-save data-cadet id="c-sq-GROUP-sub2"><span class="box"></span><span class="label-text">Second subitem</span></label>
+                </div>
+                <div class="control">
+                  <label class="check"><input type="checkbox" data-save data-control id="m-sq-GROUP-sub2"><span class="box"></span><span class="verify-text">Verified</span></label>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </li>
+
+        -->
+
+      </ul>
+    </section>
+
+    <section class="panel notes">
+      <h2>Notes</h2>
+      <label for="notes" class="muted">Reminders, questions, or feedback for this page.</label>
+      <textarea id="notes" data-save placeholder="Type notes here"></textarea>
+      <div class="actions">
+        <button type="button" class="btn primary" id="saveBtn">Save</button>
+        <span class="status" id="saveStatus" role="status" aria-live="polite"></span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">CS Mission Log</footer>
+  <script src="script.js"></script>
+</body>
+</html>
