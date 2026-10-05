@@ -1,0 +1,178 @@
+<!--
+  TEMPLATE — copy this file to make a new mission page.
+
+  Steps:
+  1. Copy this file and rename it, e.g. MissionName.html
+     (use underscores instead of spaces, matching the other pages).
+  2. Change the <title> below and the data-mission value on <body>.
+     data-mission must be unique across every page in the site —
+     it is the key used to save this page's progress.
+  3. Replace the example checklist items further down with the real ones.
+     Every checkbox needs:
+       - data-save            (tells the site to save/restore this field)
+       - data-cadet           (left column items) OR data-control (right column items)
+       - a unique id          (prefix it with "c-" for cadet, "m-" for control)
+     Keep the id PAIRS matching, e.g. c-example-item / m-example-item,
+     so cadet and control checkboxes for the same row line up visually.
+  4. Open script.js, find the MISSIONS list near the top, and add one
+     entry for this page so it shows up as a card on the home page:
+       { id: "MissionName", title: "Display Title", href: "MissionName.html", blurb: "One line about it." }
+  5. Delete this comment block (and the other HOW-TO comments below)
+     once the page is finished, or leave them — they are invisible
+     on the published page either way.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mission Name | CS Mission Log</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<!-- data-mission must be unique sitewide; it is the localStorage key. -->
+<body data-page="mission" data-mission="REPLACE_WITH_UNIQUE_ID">
+  <div class="starfield" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="index.html">CS Mission Log</a>
+    <span class="chip" id="cadetChip">No cadet saved</span>
+  </header>
+
+  <main class="wrap">
+    <!-- Breadcrumb: keep the text after " / " matching the page's title -->
+    <div class="crumb"><a href="index.html">Mission Log</a> / Mission Name</div>
+
+    <div class="page-head">
+      <h1>Mission Name</h1>
+    </div>
+
+    <!--
+      OPTIONAL: an always-visible warning banner, like the one on
+      AppInventor_Above_and_Beyond.html. Delete this whole <div> if
+      the page does not need one.
+
+    <div class="alert" role="alert">
+      <h2>Short warning headline</h2>
+      <p>Supporting instructions.</p>
+      <ol type="a">
+        <li>First rule</li>
+        <li>Second rule</li>
+      </ol>
+    </div>
+    -->
+
+    <!-- Progress meters: these fill in automatically, nothing to edit -->
+    <div class="summary">
+      <div class="panel">
+        <strong>Cadet input</strong>
+        <div class="meter"><i id="cadetMeter"></i></div>
+        <span class="meter-label" id="cadetCount">0 of 0 complete</span>
+      </div>
+      <div class="panel">
+        <strong>Mission control</strong>
+        <div class="meter"><i id="controlMeter"></i></div>
+        <span class="meter-label" id="controlCount">0 of 0 verified</span>
+      </div>
+    </div>
+
+    <!-- Shown automatically until an instructor code is saved on the home page -->
+    <div class="notice" id="codeNotice" hidden>Mission control boxes unlock when an instructor code is saved on the <a href="index.html" style="color:inherit">home page</a>.</div>
+
+    <section class="panel board" aria-label="Mission Name checklist">
+      <div class="board-head">
+        <span>Cadet input</span>
+        <span>Mission control</span>
+      </div>
+      <ul class="tree">
+
+        <!-- A single checklist item (no subitems), with an optional due date.
+             Delete the <label class="due">...</label> block if this item
+             has no due date. -->
+        <li>
+          <div class="row">
+            <div class="cadet">
+              <label class="check"><input type="checkbox" data-save data-cadet id="c-example-item"><span class="box"></span><span class="label-text">Example item</span></label>
+              <label class="due">Due <input type="date" data-save id="due-example-item" aria-label="Due date for Example item"></label>
+            </div>
+            <div class="control">
+              <label class="check"><input type="checkbox" data-save data-control id="m-example-item"><span class="box"></span><span class="verify-text">Verified</span></label>
+            </div>
+          </div>
+        </li>
+
+        <!-- A GROUP item with subitems nested under it (like MyFirstApp).
+             The group row itself gets class="row group" and its own
+             checkbox id; each subitem is a normal row inside a nested <ul>. -->
+        <li>
+          <div class="row group">
+            <div class="cadet">
+              <label class="check"><input type="checkbox" data-save data-cadet id="c-example-group"><span class="box"></span><span class="label-text">Example group</span></label>
+              <label class="due">Due <input type="date" data-save id="due-example-group" aria-label="Due date for Example group"></label>
+            </div>
+            <div class="control">
+              <label class="check"><input type="checkbox" data-save data-control id="m-example-group"><span class="box"></span><span class="verify-text">Verified</span></label>
+            </div>
+          </div>
+          <ul>
+            <li>
+              <div class="row">
+                <div class="cadet">
+                  <label class="check"><input type="checkbox" data-save data-cadet id="c-example-group-sub1"><span class="box"></span><span class="label-text">First subitem</span></label>
+                </div>
+                <div class="control">
+                  <label class="check"><input type="checkbox" data-save data-control id="m-example-group-sub1"><span class="box"></span><span class="verify-text">Verified</span></label>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <div class="cadet">
+                  <label class="check"><input type="checkbox" data-save data-cadet id="c-example-group-sub2"><span class="box"></span><span class="label-text">Second subitem</span></label>
+                </div>
+                <div class="control">
+                  <label class="check"><input type="checkbox" data-save data-control id="m-example-group-sub2"><span class="box"></span><span class="verify-text">Verified</span></label>
+                </div>
+              </div>
+            </li>
+            <!-- Copy a <li> block above to add a third subitem, and so on.
+                 Groups can nest more than one level deep the same way:
+                 put another <ul><li>...</li></ul> inside a subitem's <li>. -->
+          </ul>
+        </li>
+
+        <!-- Copy either block above to add more items or groups. -->
+
+      </ul>
+    </section>
+
+    <!-- Free-text notes box, autosaves like everything else. Delete this
+         whole <section> if the page does not need one. -->
+    <section class="panel notes">
+      <h2>Notes</h2>
+      <label for="notes" class="muted">Reminders, questions, or feedback for this page.</label>
+      <textarea id="notes" data-save placeholder="Type notes here"></textarea>
+      <div class="actions">
+        <button type="button" class="btn primary" id="saveBtn">Save</button>
+        <span class="status" id="saveStatus" role="status" aria-live="polite"></span>
+      </div>
+    </section>
+
+    <!--
+      OPTIONAL: an outbound submit button, like the Google Form button on
+      AppInventor_Above_and_Beyond.html. Delete if not needed.
+
+    <section class="panel submit-row" aria-labelledby="submitHeading">
+      <h2 id="submitHeading">Submit</h2>
+      <p class="muted">Short instruction for what to do here.</p>
+      <a class="btn primary" href="REPLACE_WITH_LINK" target="_blank" rel="noopener">Submit</a>
+    </section>
+    -->
+  </main>
+
+  <footer class="footer">CS Mission Log</footer>
+  <script src="script.js"></script>
+</body>
+</html>
