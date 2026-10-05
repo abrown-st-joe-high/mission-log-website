@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AppInventor Above and Beyond | CS Mission Log</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="mission" data-mission="AppInventor_Above_and_Beyond">
+  <div class="starfield" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="index.html">CS Mission Log</a>
+    <span class="chip" id="cadetChip">No cadet saved</span>
+  </header>
+
+  <main class="wrap">
+    <div class="crumb"><a href="index.html">Mission Log</a> / AppInventor_Above_and_Beyond</div>
+
+    <div class="page-head">
+      <h1>AppInventor Above and Beyond</h1>
+    </div>
+
+    <div class="alert" role="alert">
+      <h2>NO COLLABORATION WITH PEERS on this part and no web searches nor AI (of course)</h2>
+      <p>START BY Saving project as with <strong>Above_and_Beyond</strong> at the end, looking for those standards to complete</p>
+      <ol type="a">
+        <li>(NOTE: NO collaboration yet &mdash; work independently on those standards. Message the instructor on Canvas with questions OR talk to the instructor in class)</li>
+        <li>NO aCcIdEnTaL CHEATING by looking at another person's screen</li>
+        <li>No looking up online outside resources</li>
+      </ol>
+    </div>
+
+    <div class="summary">
+      <div class="panel">
+        <strong>Cadet input</strong>
+        <div class="meter"><i id="cadetMeter"></i></div>
+        <span class="meter-label" id="cadetCount">0 of 0 complete</span>
+      </div>
+      <div class="panel">
+        <strong>Mission control</strong>
+        <div class="meter"><i id="controlMeter"></i></div>
+        <span class="meter-label" id="controlCount">0 of 0 verified</span>
+      </div>
+    </div>
+
+    <div class="notice" id="codeNotice" hidden>Mission control boxes unlock when an instructor code is saved on the <a href="index.html" style="color:inherit">home page</a>.</div>
+
+    <section class="panel board" aria-label="AppInventor Above and Beyond checklist">
+      <div class="board-head">
+        <span>Cadet input</span>
+        <span>Mission control</span>
+      </div>
+      <ul class="tree">
+
+        <li>
+          <div class="row">
+            <div class="cadet">
+              <label class="check"><input type="checkbox" data-save data-cadet id="c-aab-l1"><span class="box"></span><span class="label-text">L1: Showing which color is currently selected</span></label>
+            </div>
+            <div class="control">
+              <label class="check"><input type="checkbox" data-save data-control id="m-aab-l1"><span class="box"></span><span class="verify-text">Verified</span></label>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="row">
+            <div class="cadet">
+              <label class="check"><input type="checkbox" data-save data-cadet id="c-aab-l2"><span class="box"></span><span class="label-text">L2: Changing the size of the brush</span></label>
+            </div>
+            <div class="control">
+              <label class="check"><input type="checkbox" data-save data-control id="m-aab-l2"><span class="box"></span><span class="verify-text">Verified</span></label>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="row">
+            <div class="cadet">
+              <label class="check"><input type="checkbox" data-save data-cadet id="c-aab-l3"><span class="box"></span><span class="label-text">L3: Something else cool</span></label>
+            </div>
+            <div class="control">
+              <label class="check"><input type="checkbox" data-save data-control id="m-aab-l3"><span class="box"></span><span class="verify-text">Verified</span></label>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="row">
+            <div class="cadet">
+              <label class="check"><input type="checkbox" data-save data-cadet id="c-aab-honesty"><span class="box"></span><span class="label-text">Honesty Statement</span></label>
+            </div>
+            <div class="control">
+              <label class="check"><input type="checkbox" data-save data-control id="m-aab-honesty"><span class="box"></span><span class="verify-text">Verified</span></label>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+    </section>
+
+    <section class="panel notes">
+      <h2>Notes</h2>
+      <label for="notes" class="muted">Reminders, questions, or feedback for this page.</label>
+      <textarea id="notes" data-save placeholder="Type notes here"></textarea>
+      <div class="actions">
+        <button type="button" class="btn primary" id="saveBtn">Save</button>
+        <span class="status" id="saveStatus" role="status" aria-live="polite"></span>
+      </div>
+    </section>
+
+    <section class="panel submit-row" aria-labelledby="submitHeading">
+      <h2 id="submitHeading">Submit</h2>
+      <p class="muted">Finish the checklist above, then submit the honesty statement through the class Google Form.</p>
+      <!--
+        Replace the href below with the real Google Form link
+        (Form > Send > copy the link), for example:
+        https://forms.gle/XXXXXXXXXXXXXXXX
+      -->
+      <a class="btn primary" href="REPLACE_WITH_GOOGLE_FORM_LINK" target="_blank" rel="noopener">Submit Google Form</a>
+    </section>
+  </main>
+
+  <footer class="footer">CS Mission Log</footer>
+  <script src="script.js"></script>
+</body>
+</html>
