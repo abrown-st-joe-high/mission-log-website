@@ -15,7 +15,20 @@ const MISSIONS = [
     title: "AppInventor Part I",
     href: "AppInventor_Part_I.html",
     blurb: "MyFirstApp, a custom app, and the SimpleDrawingApps series."
+  },
+  {
+    id: "AppInventor_Above_and_Beyond",
+    title: "AppInventor Above and Beyond",
+    href: "AppInventor_Above_and_Beyond.html",
+    blurb: "Independent work: color selection, brush size, and one more feature."
+  },
+  {
+    id: "SideQuests",
+    title: "SideQuests",
+    href: "SideQuests.html",
+    blurb: "ReflectionResponse, worksheets, and the Cipher activity."
   }
+  // Copy template.html for a new page, then add its entry here, e.g.:
   // { id: "AppInventor_Part_II", title: "AppInventor Part II", href: "AppInventor_Part_II.html", blurb: "..." },
 ];
 
